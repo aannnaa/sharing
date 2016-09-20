@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container video">
+    <p><a href="<%= url %>" target="_blank"><%= url %></a></p>
+    <div class="videoContainer">
+        <% if(type == 'video'){ %>
+            <iframe width="<%= video.width[0] %>" height="<%= video.height[0] %>" scrolling="no" src="<%= video.secure_url[0] %>">
+            </iframe>
+        <% } else if( video.iframe ){ %>
+            <iframe width="<%= video.width %>" height="<%= video.height %>" scrolling="no" src="<%= video.iframe %>">
+            </iframe>
+        <% } %>
+    </div>
+    <div class="content">
+        <div class="page-title">
+            <a href="<%= url %>" target="_blank"><%= title %></a>
+        </div>
+        <div class="page-description">
+            <%= description %>
+        </div>
+        <p><%= site_name %></p>
+    </div>
+</div>
+</body>
+</html>

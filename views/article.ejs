@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container article">
+        <p><a href="<%= url %>" target="_blank"><%= url %></a></p>
+        <div>
+            <img src="<%= image.url %>" width="<%= image.width %>" height="<%= image.height %>" />
+        </div>
+        <div class="content">
+            <div class="page-title">
+                <a href="<%= url %>" target="_blank"><%= title %></a>
+            </div>
+            <div class="page-description">
+                <%= description %>
+            </div>
+            <p><%= site_name %></p>
+        </div>
+    </div>
+</body>
+</html>
